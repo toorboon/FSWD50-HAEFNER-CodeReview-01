@@ -4,7 +4,7 @@ body {
 	height: auto;
 	margin: 0;
 	font-family: Roboto, sans-serif;
-	font-size: 2.5vmin;
+	font-size: 1.5vmin;
 }
 
 /*CSS for the header part*/
@@ -56,11 +56,6 @@ ul.top_nav li a {
 ul.top_nav li a:hover:not(.active) {background-color: #903e23;}
 
 ul.top_nav li a.active {background-color: #4CAF50;}
-
-/*if the window is resized to small the nav bar switches to vertical*/
-@media screen and (max-width: 600px){ 
-    ul.top_nav li {float: none;}
-}
 
 /*CSS for hero element*/
 .hero {
@@ -144,11 +139,10 @@ footer {
 	background-color: lightgrey;
 	border-radius: 10px;	
 	padding: 20px;
-	margin: 11px;
-	
+	margin: 11px;	
 }
-input[type="text"], input[type="email"]
-{
+
+input[type="text"], input[type="email"] {
 	 width:90%;
 	 height:25px;
 	 line-height:25px;
@@ -157,8 +151,25 @@ input[type="text"], input[type="email"]
 	 border:1px solid #236;
 	 border-radius:3px;
 	 padding:2%;
-
 }
-article {
-	padding: 20px;
+
+article {padding: 20px;}
+
+/*if the window is resized to small the nav bar switches to vertical*/
+@media screen and (max-width: 600px) { 
+    
+    ul.top_nav li {float: none;}
+    
+    .header_span_text {display: none;}
+    
+    .img_header {width: 100%;}
+    
+    body {font-size: 2.5vmin;}
+    
+    #forms_container {
+    	margin-left: auto;
+    	margin-right: auto;
+    }
+    
+    .second_header {text-align: center;}	
 }
