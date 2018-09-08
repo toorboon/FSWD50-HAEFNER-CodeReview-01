@@ -23,14 +23,15 @@ body {
 
 #header_text {transform: translateX(-45%);}
 
-header span {
+header div {
 	width: 30%;
 	font-size: 20px;
 	font-size: 2vw;
 	position: relative;
 	display: table-cell;
 	vertical-align: middle;
-	text-align: left;			
+	text-align: left;
+
 }
 
 /*CSS for navbar*/
@@ -69,7 +70,7 @@ ul.top_nav li a.active {background-color: #4CAF50;}
 
 /*CSS for iframe header*/
 .second_header {
-	height: 100%;
+	
 	background-color: #877d78;
 	color: white;
 	font-weight: bold;		
@@ -77,11 +78,21 @@ ul.top_nav li a.active {background-color: #4CAF50;}
 	text-transform: uppercase;
 }
 
-/*CSS for the iframe*/
-iframe {
-	width: 100%;
-	height: 1100px;
-	border: none;	
+.iframe_container {
+  width: auto;
+  height: auto;
+  overflow: hidden;
+  padding-top: 85%;
+  position: relative;
+}
+
+.iframe_container iframe {
+   border: 0;
+   height: 100%;
+   left: 0;
+   position: absolute;
+   top: 0;
+   width: 100%;
 }
 
 /*CSS for Flex container*/
@@ -94,11 +105,11 @@ iframe {
 		
 /*Items in the flex container*/
 .image_container {
-	width: 200px;
+	width: 350px;
 	height: auto;
 	flex-basis: auto;
-	flex-grow: 2;
-	flex-shrink: 2;
+	flex-grow: 3;
+	flex-shrink: 3;
 	padding:  10px;
 	margin: 5px;
 	border-radius: 5px;
@@ -135,11 +146,12 @@ footer {
 
 /*CSS for contactform*/
 .forms_container {
-	width: 50%;
+	
 	background-color: lightgrey;
 	border-radius: 10px;	
 	padding: 20px;
-	margin: 11px;	
+	margin: 3% 50% 0 3%;
+		
 }
 
 input[type="text"], input[type="email"] {
@@ -150,12 +162,24 @@ input[type="text"], input[type="email"] {
 	 background-color:#fff;
 	 border:1px solid #236;
 	 border-radius:3px;
-	 padding:2%;
+	 padding:1%;
+	 margin-bottom: 5px;
 }
 
-article {padding: 20px;}
+/*CSS for about me section*/
+.about_me {
+	padding: 20px;
+	padding-left: 200px;
+	padding-right: 200px;
 
-/*if the window is resized to small the nav bar switches to vertical*/
+	margin-left: auto;
+	margin-right: auto}
+
+.about_me p {
+	padding: 5px;
+}
+
+/*if the window is resized to small the nav bar switches to vertical and other stylings are corrected*/
 @media screen and (max-width: 600px) { 
     
     ul.top_nav li {float: none;}
@@ -164,7 +188,7 @@ article {padding: 20px;}
     
     .img_header {width: 100%;}
     
-    body {font-size: 2.5vmin;}
+    body {font-size: 3vmin;}
     
     #forms_container {
     	margin-left: auto;
@@ -172,4 +196,6 @@ article {padding: 20px;}
     }
     
     .second_header {text-align: center;}	
+
+	.about_me {padding: 20px;}
 }
